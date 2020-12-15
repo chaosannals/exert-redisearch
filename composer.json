@@ -1,0 +1,18 @@
+{
+    "name": "chaosannals/exert-redisearch",
+    "type": "project",
+    "license": "MIT",
+    "description": "redisearch exert",
+    "authors": [
+        {
+            "name": "chaosannals",
+            "email": "chaosannals@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "exert\\": "main"
+        }
+    },
+    "require": {}
+}
