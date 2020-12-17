@@ -42,6 +42,15 @@ class RedisearchIndex
         return $this;
     }
 
+    public function defineGEO($name, $sortable = false)
+    {
+        $result = [$name, 'GEO'];
+        if ($sortable) {
+            $result[] = 'SORTABLE';
+        }
+        return $this;
+    }
+
     public function getName()
     {
         return $this->name;
@@ -53,7 +62,8 @@ class RedisearchIndex
             'FT.CREATE', $this->name, 'ON', 'HASH',
             'PREFIX', '1', 'doc:',
             'LANGUAGE', $this->langurage,
-            'SCHEMA'];
+            'SCHEMA'
+        ];
         return array_reduce($this->defines, 'array_merge', $result);
     }
 }
