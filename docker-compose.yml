@@ -2,7 +2,7 @@ version: '3.8'
 
 services: 
   redisearch-server:
-    image: redislabs/redisearch
+    image: redislabs/redisearch:2.0.8
     container_name: redisearch-server
     ports: 
       - "16379:6379"
