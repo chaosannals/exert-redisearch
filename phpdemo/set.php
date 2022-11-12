@@ -20,6 +20,15 @@ $r = $client->set('doc:3', [
     'price' => 123.23
 ]);
 echo $r;
+
+$r = $client->set('doc:4', [
+    'body' => 'en body 2',
+    'title' => '标题',
+    'url' => 'http://example.cn',
+    'price' => 123.23
+]);
+echo $r;
+
 $r = $client->set('doc:5', [
     'body' => '中文测试2',
     'title' => '中文标题13',
